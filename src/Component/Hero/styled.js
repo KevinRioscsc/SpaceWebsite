@@ -3,8 +3,9 @@ import styled from "styled-components";
 export const HeroContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  padding: 150px 150px;
+  align-items: center;
+  height: 85vh;
+  padding: 0px 150px;
 `;
 export const Headlines = styled.div`
   color: white;
@@ -43,7 +44,7 @@ export const CALLTOACTION = styled.div`
   font-size: 32px;
   cursor: pointer;
   border: 1px solid white;
-
+  color: #0b0d17;
   z-index: 99;
   position: relative;
   &::before {

@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../../Downloads/assets/shared/logo.svg";
+import { Link } from "react-router-dom";
 import {
   NavigationContain,
   Logo,
@@ -19,28 +20,36 @@ const Naviagtion = () => {
         <LinksContainer>
           <Line></Line>
           <LinksLi>
-            <ATag>
-              <Num>00</Num>
-              <Name>HOME</Name>
-            </ATag>
+            <Link to={"/"}>
+              <ATag>
+                <Num>00</Num>
+                <Name>HOME</Name>
+              </ATag>
+            </Link>
           </LinksLi>
           <LinksLi>
-            <ATag>
-              <Num>01</Num>
-              <Name>DESTINATION</Name>
-            </ATag>
+            <Link to={"/destination"}>
+              <ATag>
+                <Num>01</Num>
+                <Name>DESTINATION</Name>
+              </ATag>
+            </Link>
           </LinksLi>
           <LinksLi>
-            <ATag>
-              <Num>02</Num>
-              <Name>CREW</Name>
-            </ATag>
+            <Link to={"/crew"}>
+              <ATag>
+                <Num>02</Num>
+                <Name>CREW</Name>
+              </ATag>
+            </Link>
           </LinksLi>
           <LinksLi>
-            <ATag>
-              <Num>03</Num>
-              <Name>TECHNOLOGY</Name>
-            </ATag>
+            <Link to={"/technology"}>
+              <ATag>
+                <Num>03</Num>
+                <Name>TECHNOLOGY</Name>
+              </ATag>
+            </Link>
           </LinksLi>
         </LinksContainer>
       </NavigationContain>

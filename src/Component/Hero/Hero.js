@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   HeroContainer,
   Headlines,
@@ -9,7 +10,7 @@ import {
 } from "./styled";
 const Hero = () => {
   return (
-    <div>
+    <>
       <HeroContainer>
         <Headlines>
           <PreTitle>SO, YOU WANT TO TRAVEL TO</PreTitle>
@@ -21,9 +22,11 @@ const Hero = () => {
             world experience!
           </DESCRIPTION>
         </Headlines>
-        <CALLTOACTION>EXPLORE</CALLTOACTION>
+        <Link to={"/destination"}>
+          <CALLTOACTION>EXPLORE</CALLTOACTION>
+        </Link>
       </HeroContainer>
-    </div>
+    </>
   );
 };
 
