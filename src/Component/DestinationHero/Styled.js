@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 export const DestinationContainer = styled.div`
-  padding: 50px 150px;
+  padding: 100px 150px;
   color: white;
   display: flex;
   flex-direction: column;
 
-  justify-content: center;
   gap: 100px;
 `;
 export const Title = styled.div`

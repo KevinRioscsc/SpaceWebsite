@@ -4,7 +4,8 @@ export const NavigationContain = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 0px 0px 50px;
+  padding: 0px 0px 0px 50px;
+  height: 15vh;
 `;
 export const Logo = styled.img``;
 export const LinksContainer = styled.ul`
