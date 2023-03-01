@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const NavigationContain = styled.div`
   display: flex;
@@ -30,13 +31,9 @@ export const Line = styled.div`
 export const LinksLi = styled.li`
   color: white;
   list-style: none;
+  height: 100%;
 `;
-export const ATag = styled.a`
-  text-decoration: none;
-  cursor: pointer;
-  display: flex;
-  gap: 10px;
-`;
+export const ATag = styled.a``;
 export const Num = styled.div`
   font-family: "Barlow Condensed", sans-serif;
   font-size: 16px;
@@ -47,4 +44,36 @@ export const Name = styled.div`
   font-family: "Barlow Condensed", sans-serif;
   font-size: 16px;
   letter-spacing: 2.7px;
+`;
+export const LinkTo = styled(NavLink)`
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 10px;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: rgb(255, 255, 255, 0.5021);
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+  }
+  &:hover::before {
+    opacity: 1;
+  }
+  &.active::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: rgb(255, 255, 255);
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
 `;

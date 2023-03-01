@@ -24,58 +24,81 @@ import {
   PlanetLink,
   PlanetWrapper,
 } from "./Styled";
+import { useNavigate } from "../Context/navigationGuide";
 
-const Destination = () => {
+const Destination = (props) => {
+  const { setGETID } = useNavigate();
+  const { name, images, description, distance, travel } = props;
+
   return (
-    <div>
+    <>
       <DestinationContainer>
         <Title>
           <Number>01</Number>
           <TitleName>PICK YOUR DESTINATION</TitleName>
         </Title>
         <PlanetInfo>
-          <PlanetPhoto src={planetPhoto} alt="planet photo"></PlanetPhoto>
+          <PlanetPhoto src={images.png} alt="planet photo"></PlanetPhoto>
           <PlanetWrapper>
             <PlanetDescr>
               <NavigationPlanet>
                 <PlanetLi>
-                  <PlanetLink>MOON</PlanetLink>
+                  <PlanetLink
+                    to={`/destination/Moon`}
+                    activeClassName
+                    onClick={() => setGETID("Moon")}
+                  >
+                    MOON
+                  </PlanetLink>
                 </PlanetLi>
                 <PlanetLi>
-                  <PlanetLink>MARS</PlanetLink>
+                  <PlanetLink
+                    to={`/destination/Mars`}
+                    activeClassName
+                    onClick={() => setGETID("Mars")}
+                  >
+                    MARS
+                  </PlanetLink>
                 </PlanetLi>
                 <PlanetLi>
-                  <PlanetLink>EUROPA</PlanetLink>
+                  <PlanetLink
+                    to={`/destination/Europa`}
+                    activeClassName
+                    onClick={() => setGETID("Europa")}
+                  >
+                    EUROPA
+                  </PlanetLink>
                 </PlanetLi>
                 <PlanetLi>
-                  <PlanetLink>TITAN</PlanetLink>
+                  <PlanetLink
+                    to={`/destination/Titan`}
+                    activeClassName
+                    onClick={() => setGETID("Titan")}
+                  >
+                    TITAN
+                  </PlanetLink>
                 </PlanetLi>
               </NavigationPlanet>
               <PlanetFacts>
-                <PlanetName>MOON</PlanetName>
-                <PlanetP>
-                  See our planet as you’ve never seen it before. A perfect
-                  relaxing trip away to help regain perspective and come back
-                  refreshed. While you’re there, take in some history by
-                  visiting the Luna 2 and Apollo 11 landing sites.
-                </PlanetP>
+                <PlanetName>{name}</PlanetName>
+                <PlanetP>{description}</PlanetP>
               </PlanetFacts>
             </PlanetDescr>
             <Line></Line>
             <PlanetTravel>
               <Distance>
                 <DistanceTitle>AVG. DISTANCE</DistanceTitle>
-                <ActualDistance>384,400 KM</ActualDistance>
+                <ActualDistance>{distance}</ActualDistance>
               </Distance>
               <Time>
                 <TimeTitle>EST. TRAVEL TIME</TimeTitle>
-                <ActualTime>3 DAYS</ActualTime>
+                <ActualTime>{travel}</ActualTime>
               </Time>
             </PlanetTravel>
           </PlanetWrapper>
         </PlanetInfo>
       </DestinationContainer>
-    </div>
+    </>
   );
 };
 

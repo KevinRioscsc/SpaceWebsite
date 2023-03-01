@@ -4,12 +4,15 @@ import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import RoutesTree from "./RoutesTree";
 import App from "./App";
+import NavigationGuide from "./Component/Context/navigationGuide";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <RoutesTree />
-    </BrowserRouter>
+    <NavigationGuide>
+      <BrowserRouter>
+        <RoutesTree />
+      </BrowserRouter>
+    </NavigationGuide>
   </React.StrictMode>
 );

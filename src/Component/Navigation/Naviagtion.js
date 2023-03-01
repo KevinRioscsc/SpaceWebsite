@@ -1,15 +1,14 @@
 import React from "react";
 import logo from "../../Downloads/assets/shared/logo.svg";
-import { Link } from "react-router-dom";
 import {
   NavigationContain,
   Logo,
   LinksContainer,
   Line,
   LinksLi,
-  ATag,
   Num,
   Name,
+  LinkTo,
 } from "./Styled";
 //reduce LinksLi by iterating thru a data array
 const Naviagtion = () => {
@@ -20,36 +19,28 @@ const Naviagtion = () => {
         <LinksContainer>
           <Line></Line>
           <LinksLi>
-            <Link to={"/"}>
-              <ATag>
-                <Num>00</Num>
-                <Name>HOME</Name>
-              </ATag>
-            </Link>
+            <LinkTo to={"/"} activeClassName>
+              <Num>00</Num>
+              <Name>HOME</Name>
+            </LinkTo>
           </LinksLi>
           <LinksLi>
-            <Link to={"/destination"}>
-              <ATag>
-                <Num>01</Num>
-                <Name>DESTINATION</Name>
-              </ATag>
-            </Link>
+            <LinkTo to={"/destination/Moon"} activeClassName>
+              <Num>01</Num>
+              <Name>DESTINATION</Name>
+            </LinkTo>
           </LinksLi>
           <LinksLi>
-            <Link to={"/crew"}>
-              <ATag>
-                <Num>02</Num>
-                <Name>CREW</Name>
-              </ATag>
-            </Link>
+            <LinkTo to={"/crew"} activeClassName>
+              <Num>02</Num>
+              <Name>CREW</Name>
+            </LinkTo>
           </LinksLi>
           <LinksLi>
-            <Link to={"/technology"}>
-              <ATag>
-                <Num>03</Num>
-                <Name>TECHNOLOGY</Name>
-              </ATag>
-            </Link>
+            <LinkTo to={"/technology"} activeClassName>
+              <Num>03</Num>
+              <Name>TECHNOLOGY</Name>
+            </LinkTo>
           </LinksLi>
         </LinksContainer>
       </NavigationContain>

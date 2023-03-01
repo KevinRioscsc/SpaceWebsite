@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const DestinationContainer = styled.div`
   padding: 100px 150px;
@@ -108,12 +109,22 @@ export const TitleName = styled.div`
 export const PlanetLi = styled.li`
   list-style: none;
 `;
-export const PlanetLink = styled.a`
+export const PlanetLink = styled(NavLink)`
   text-decoration: none;
   font-family: "Barlow Condensed", sans-serif;
   font-size: 16px;
   color: #d0d6f9;
   letter-spacing: 2.7px;
+  padding-bottom: 15px;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 3px solid rgb(255, 255, 255, 0);
+  &:hover {
+    border-bottom: 3px solid rgb(255, 255, 255, 0.5);
+  }
+  &.active {
+    color: white;
+    border-bottom: 3px solid white;
+  }
 `;
 export const PlanetWrapper = styled.div`
   width: 40%;
