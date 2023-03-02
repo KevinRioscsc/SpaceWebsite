@@ -25,19 +25,23 @@ const Naviagtion = () => {
             </LinkTo>
           </LinksLi>
           <LinksLi>
-            <LinkTo to={"/destination/Moon"} activeClassName>
+            <LinkTo
+              defaultValue={"/destination/Moon"}
+              to={"/destination"}
+              activeClassName
+            >
               <Num>01</Num>
               <Name>DESTINATION</Name>
             </LinkTo>
           </LinksLi>
           <LinksLi>
-            <LinkTo to={"/crew/Douglas Hurley"} activeClassName>
+            <LinkTo to={"/crew"} activeClassName>
               <Num>02</Num>
               <Name>CREW</Name>
             </LinkTo>
           </LinksLi>
           <LinksLi>
-            <LinkTo to={"/technology/Launch vehicle"} activeClassName>
+            <LinkTo to={"/technology"} activeClassName>
               <Num>03</Num>
               <Name>TECHNOLOGY</Name>
             </LinkTo>

@@ -7,14 +7,19 @@ import TechPage from "./Pages/TechPage";
 import { useNavigate } from "./Component/Context/navigationGuide";
 
 const RoutesTree = () => {
-  const { getID } = useNavigate();
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/destination/:id" element={<DestinationPage />}></Route>
-        <Route path="/crew/:id" element={<Crew />} />
-        <Route path="/Technology/:id" element={<TechPage />} />
+        <Route exact path="/destination" element={<DestinationPage />}>
+          <Route path=":id" element={<DestinationPage />} />
+        </Route>
+        <Route exact path="/crew" element={<Crew />}>
+          <Route path=":id" element={<Crew />} />
+        </Route>
+        <Route exact path="/technology" element={<TechPage />}>
+          <Route path=":id" element={<TechPage />} />
+        </Route>
       </Routes>
     </>
   );

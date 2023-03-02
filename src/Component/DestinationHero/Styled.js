@@ -8,11 +8,18 @@ export const DestinationContainer = styled.div`
   flex-direction: column;
 
   gap: 100px;
+  @media screen and (max-width: 768px) {
+    padding: 0px 60px;
+    padding-top: 50px;
+  }
 `;
 export const Title = styled.div`
   font-size: 28px;
   display: flex;
   gap: 20px;
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+  }
 `;
 export const PlanetInfo = styled.div`
   display: flex;
@@ -20,6 +27,10 @@ export const PlanetInfo = styled.div`
   justify-content: center;
 
   gap: 100px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 50px;
+  }
 `;
 export const PlanetPhoto = styled.img`
   width: 445px;
@@ -28,6 +39,9 @@ export const PlanetPhoto = styled.img`
   }
   @media screen and (max-width: 877px) {
     width: 145px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 300px;
   }
 `;
 export const PlanetDescr = styled.div`
@@ -41,21 +55,34 @@ export const NavigationPlanet = styled.ul`
   padding: 0;
   display: flex;
   gap: 40px;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 export const PlanetFacts = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
 `;
 export const PlanetName = styled.div`
   font-family: "Bellefair", serif;
   font-size: 100px;
+  @media screen and (max-width: 768px) {
+    font-size: 80px;
+  }
 `;
 export const PlanetP = styled.div`
   color: #d0d6f9;
   font-family: "Barlow", sans-serif;
   line-height: 32px;
   font-size: 18px;
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+    text-align: center;
+  }
 `;
 export const Line = styled.div`
   height: 1px;
@@ -65,11 +92,17 @@ export const Line = styled.div`
 export const PlanetTravel = styled.div`
   display: flex;
   gap: 50px;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 export const Distance = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
+  @media screen and (max-width: 768px) {
+    align-items: center;
+  }
 `;
 export const DistanceTitle = styled.div`
   color: #d0d6f9;
@@ -85,6 +118,9 @@ export const Time = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
+  @media screen and (max-width: 768px) {
+    align-items: center;
+  }
 `;
 export const TimeTitle = styled.div`
   color: #d0d6f9;
@@ -117,13 +153,10 @@ export const PlanetLink = styled(NavLink)`
   letter-spacing: 2.7px;
   padding-bottom: 15px;
   transition: all 0.2s ease-in-out;
-  border-bottom: 3px solid rgb(255, 255, 255, 0);
+  border-bottom: ${(props) =>
+    props.isactive ? " 3px solid white" : "3px solid rgb(255, 255, 255, 0)"};
   &:hover {
     border-bottom: 3px solid rgb(255, 255, 255, 0.5);
-  }
-  &.active {
-    color: white;
-    border-bottom: 3px solid white;
   }
 `;
 export const PlanetWrapper = styled.div`

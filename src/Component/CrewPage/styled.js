@@ -15,17 +15,19 @@ export const CrewContainer = styled.div`
 export const Title = styled.div`
   display: flex;
   gap: 20px;
-  padding-top: 40px;
+  padding-top: 50px;
+  font-size: 28px;
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+  }
 `;
 export const Num = styled.div`
-  font-size: 28px;
   letter-spacing: 4.72px;
   opacity: 0.25;
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 700;
 `;
 export const PageDescr = styled.div`
-  font-size: 28px;
   letter-spacing: 4.72px;
 
   font-family: "Barlow Condensed", sans-serif;
@@ -34,21 +36,37 @@ export const CrewInfo = styled.div`
   display: flex;
   align-items: center;
   gap: 80px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding-top: 60px;
+  }
 `;
 export const CrewMember = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
   width: 100%;
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+    align-items: center;
+    gap: 0;
+  }
 `;
 export const CrewTitle = styled.div`
   font-size: 32px;
   font-family: "Bellefair", serif;
   opacity: 0.5042;
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
+  }
 `;
 export const CrewName = styled.div`
   font-size: 56px;
   font-family: "Bellefair", serif;
+  @media screen and (max-width: 768px) {
+    font-size: 40px;
+    padding-top: 8px;
+  }
 `;
 export const CrewDesc = styled.div`
   font-family: "Barlow", sans-serif;
@@ -57,12 +75,20 @@ export const CrewDesc = styled.div`
   color: #d0d6f9;
   padding-top: 20px;
   max-width: 444px;
+  @media screen and (max-width: 768px) {
+    text-align: center;
+    font-size: 16px;
+    padding-top: 16px;
+  }
 `;
 export const Navigation = styled.ul`
   display: flex;
   padding: 0;
   gap: 20px;
   padding-top: 100px;
+  @media screen and (max-width: 768px) {
+    padding-top: 20px;
+  }
 `;
 export const Li = styled.li`
   list-style: none;
@@ -74,13 +100,11 @@ export const LinkA = styled(NavLink)`
   width: 15px;
   background: white;
   border-radius: 100px;
-  opacity: 0.1744;
+  opacity: ${(props) => (props.isactive ? "1" : "0.1744")};
   transition: all 0.2s ease-in-out;
   color: white;
   cursor: pointer;
-  &.active {
-    opacity: 1;
-  }
+
   &:hover {
     opacity: 0.5001;
   }
@@ -94,5 +118,9 @@ export const CrewPhoto = styled.img`
   }
   @media screen and (max-width: 886px) {
     width: 350.07px;
+  }
+  @media screen and (max-width: 768px) {
+    align-self: center;
+    width: 456.37px;
   }
 `;

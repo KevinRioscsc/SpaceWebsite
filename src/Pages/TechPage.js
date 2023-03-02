@@ -8,9 +8,10 @@ import TechBackground from "../Downloads/assets/technology/background-technology
 
 const TechPage = () => {
   let { id } = useParams();
+  const techObj = id ? id : "Launch vehicle";
 
-  const tech = technology.find((tech) => tech.name === id);
-  console.log(tech);
+  const tech = technology.find((tech) => tech.name === techObj);
+
   return (
     <>
       <BackTemplate img={TechBackground}>

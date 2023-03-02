@@ -9,6 +9,9 @@ import AA from "./assets/crew/image-anousheh-ansari.png";
 import LV from "./assets/technology/image-launch-vehicle-portrait.jpg";
 import SC from "./assets/technology/image-space-capsule-portrait.jpg";
 import SP from "./assets/technology/image-spaceport-portrait.jpg";
+import LVLand from "./assets/technology/image-launch-vehicle-landscape.jpg";
+import SCLand from "./assets/technology/image-space-capsule-landscape.jpg";
+import SPLand from "./assets/technology/image-spaceport-landscape.jpg";
 export const destination = [
   {
     name: "Moon",
@@ -100,7 +103,7 @@ export const technology = [
     name: "Launch vehicle",
     images: {
       portrait: LV,
-      landscape: "./assets/technology/image-launch-vehicle-landscape.jpg",
+      landscape: LVLand,
     },
     description:
       "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!",
@@ -109,7 +112,7 @@ export const technology = [
     name: "Spaceport",
     images: {
       portrait: SP,
-      landscape: "./assets/technology/image-spaceport-landscape.jpg",
+      landscape: SPLand,
     },
     description:
       "A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch.",
@@ -118,7 +121,7 @@ export const technology = [
     name: "Space capsule",
     images: {
       portrait: SC,
-      landscape: "./assets/technology/image-space-capsule-landscape.jpg",
+      landscape: SCLand,
     },
     description:
       "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.",

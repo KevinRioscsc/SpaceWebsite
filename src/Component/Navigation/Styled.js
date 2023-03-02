@@ -7,6 +7,9 @@ export const NavigationContain = styled.div`
   align-items: center;
   padding: 0px 0px 0px 50px;
   height: 15vh;
+  @media screen and (max-width: 768px) {
+    height: 10vh;
+  }
 `;
 export const Logo = styled.img``;
 export const LinksContainer = styled.ul`
@@ -18,6 +21,14 @@ export const LinksContainer = styled.ul`
   align-items: center;
   backdrop-filter: blur(150px);
   gap: 40px;
+  @media screen and (max-width: 768px) {
+    height: 100%;
+    width: 450px;
+    padding: 0;
+    justify-content: center;
+    padding: 0px 20px 0px 20px;
+    backdrop-filter: blur(81.55px);
+  }
 `;
 export const Line = styled.div`
   height: 1px;
@@ -26,7 +37,14 @@ export const Line = styled.div`
   background: #979797;
   left: -58%;
   top: 50%;
-  opacity: 0.94;
+  opacity: 0.2515;
+  @media screen and (max-width: 1370px) {
+    min-width: 273px;
+    left: -30%;
+  }
+  @media screen and (max-width: 1101px) {
+    display: none;
+  }
 `;
 export const LinksLi = styled.li`
   color: white;
@@ -39,11 +57,17 @@ export const Num = styled.div`
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 2.7px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 export const Name = styled.div`
   font-family: "Barlow Condensed", sans-serif;
   font-size: 16px;
   letter-spacing: 2.7px;
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 export const LinkTo = styled(NavLink)`
   text-decoration: none;

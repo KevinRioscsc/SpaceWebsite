@@ -31,16 +31,28 @@ const CrewPage = (props) => {
             <CrewDesc>{bio}</CrewDesc>
             <Navigation>
               <Li>
-                <LinkA to={`/crew/Douglas Hurley`}></LinkA>
+                <LinkA
+                  to={`/crew`}
+                  isactive={name === "Douglas Hurley" ? true : false}
+                ></LinkA>
               </Li>
               <Li>
-                <LinkA to={`/crew/Mark Shuttleworth`}></LinkA>
+                <LinkA
+                  to={`/crew/Mark Shuttleworth`}
+                  isactive={name === "Mark Shuttleworth" ? true : false}
+                ></LinkA>
               </Li>
               <Li>
-                <LinkA to={`/crew/Victor Glover`}></LinkA>
+                <LinkA
+                  to={`/crew/Victor Glover`}
+                  isactive={name === "Victor Glover" ? true : false}
+                ></LinkA>
               </Li>
               <Li>
-                <LinkA to={`/crew/Anousheh Ansari`}></LinkA>
+                <LinkA
+                  to={`/crew/Anousheh Ansari`}
+                  isactive={name === "Anousheh Ansari" ? true : false}
+                ></LinkA>
               </Li>
             </Navigation>
           </CrewMember>

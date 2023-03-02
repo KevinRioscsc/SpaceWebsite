@@ -7,6 +7,9 @@ const Background = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  @media screen and (max-width: 768px) {
+    height: auto;
+  }
 `;
 
 const BackTemplate = ({ children, img }) => {

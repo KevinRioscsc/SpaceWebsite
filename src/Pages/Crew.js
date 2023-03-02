@@ -9,7 +9,8 @@ import CrewBackground from "../Downloads/assets/crew/background-crew-desktop.jpg
 const Crew = () => {
   let { id } = useParams();
 
-  const crewMember = crew.find((item) => item.name === id);
+  const crewInfo = id ? id : "Douglas Hurley";
+  const crewMember = crew.find((item) => item.name === crewInfo);
 
   return (
     <>

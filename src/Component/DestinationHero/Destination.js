@@ -44,9 +44,8 @@ const Destination = (props) => {
               <NavigationPlanet>
                 <PlanetLi>
                   <PlanetLink
-                    to={`/destination/Moon`}
-                    activeClassName
-                    onClick={() => setGETID("Moon")}
+                    to={`/destination `}
+                    isactive={name === "Moon" ? true : false}
                   >
                     MOON
                   </PlanetLink>
@@ -54,8 +53,7 @@ const Destination = (props) => {
                 <PlanetLi>
                   <PlanetLink
                     to={`/destination/Mars`}
-                    activeClassName
-                    onClick={() => setGETID("Mars")}
+                    isactive={name === "Mars" ? true : false}
                   >
                     MARS
                   </PlanetLink>
@@ -63,8 +61,7 @@ const Destination = (props) => {
                 <PlanetLi>
                   <PlanetLink
                     to={`/destination/Europa`}
-                    activeClassName
-                    onClick={() => setGETID("Europa")}
+                    isactive={name === "Europa" ? true : false}
                   >
                     EUROPA
                   </PlanetLink>
@@ -72,8 +69,7 @@ const Destination = (props) => {
                 <PlanetLi>
                   <PlanetLink
                     to={`/destination/Titan`}
-                    activeClassName
-                    onClick={() => setGETID("Titan")}
+                    isactive={name === "Titan" ? true : false}
                   >
                     TITAN
                   </PlanetLink>
