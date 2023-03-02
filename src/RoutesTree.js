@@ -13,8 +13,8 @@ const RoutesTree = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/destination/:id" element={<DestinationPage />}></Route>
-        <Route path="/crew" element={<Crew />} />
-        <Route path="/Technology" element={<TechPage />} />
+        <Route path="/crew/:id" element={<Crew />} />
+        <Route path="/Technology/:id" element={<TechPage />} />
       </Routes>
     </>
   );

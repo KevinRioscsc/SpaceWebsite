@@ -31,13 +31,13 @@ const Naviagtion = () => {
             </LinkTo>
           </LinksLi>
           <LinksLi>
-            <LinkTo to={"/crew"} activeClassName>
+            <LinkTo to={"/crew/Douglas Hurley"} activeClassName>
               <Num>02</Num>
               <Name>CREW</Name>
             </LinkTo>
           </LinksLi>
           <LinksLi>
-            <LinkTo to={"/technology"} activeClassName>
+            <LinkTo to={"/technology/Launch vehicle"} activeClassName>
               <Num>03</Num>
               <Name>TECHNOLOGY</Name>
             </LinkTo>

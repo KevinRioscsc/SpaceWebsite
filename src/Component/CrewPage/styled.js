@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const CrewContainer = styled.div`
   color: white;
@@ -66,7 +67,8 @@ export const Navigation = styled.ul`
 export const Li = styled.li`
   list-style: none;
 `;
-export const LinkA = styled.div`
+export const LinkA = styled(NavLink)`
+  display: block;
   text-decoration: none;
   height: 15px;
   width: 15px;
@@ -74,7 +76,11 @@ export const LinkA = styled.div`
   border-radius: 100px;
   opacity: 0.1744;
   transition: all 0.2s ease-in-out;
+  color: white;
   cursor: pointer;
+  &.active {
+    opacity: 1;
+  }
   &:hover {
     opacity: 0.5001;
   }

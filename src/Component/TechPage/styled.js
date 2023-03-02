@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const TechWrapper = styled.div`
   color: white;
@@ -45,6 +46,9 @@ export const Navigation = styled.ul`
 `;
 export const Li = styled.li`
   list-style: none;
+`;
+export const LinksA = styled(NavLink)`
+  font-family: "Bellefair", serif;
   height: 80px;
   width: 80px;
   background: transparent;
@@ -57,14 +61,14 @@ export const Li = styled.li`
   letter-spacing: 2px;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
+  color: white;
   &:hover {
     border: 1px solid rgba(255, 255, 255);
   }
-`;
-export const LinksA = styled.div`
-  font-family: "Bellefair", serif;
-
-  color: white;
+  &.active {
+    background: white;
+    color: black;
+  }
 `;
 export const TechInfo = styled.div`
   display: flex;

@@ -14,9 +14,9 @@ import {
   LinkA,
   CrewPhoto,
 } from "./styled";
-import douglas from "../../Downloads/assets/crew/image-douglas-hurley.png";
 
-const CrewPage = () => {
+const CrewPage = (props) => {
+  const { name, bio, images, role } = props;
   return (
     <>
       <CrewContainer>
@@ -26,29 +26,25 @@ const CrewPage = () => {
         </Title>
         <CrewInfo>
           <CrewMember>
-            <CrewTitle>COMMANDER</CrewTitle>
-            <CrewName>DOUGLAS HURLEY</CrewName>
-            <CrewDesc>
-              Douglas Gerald Hurley is an American engineer, former Marine Corps
-              pilot and former NASA astronaut. He launched into space for the
-              third time as commander of Crew Dragon Demo-2.
-            </CrewDesc>
+            <CrewTitle>{role.toUpperCase()}</CrewTitle>
+            <CrewName>{name.toUpperCase()}</CrewName>
+            <CrewDesc>{bio}</CrewDesc>
             <Navigation>
               <Li>
-                <LinkA></LinkA>
+                <LinkA to={`/crew/Douglas Hurley`}></LinkA>
               </Li>
               <Li>
-                <LinkA></LinkA>
+                <LinkA to={`/crew/Mark Shuttleworth`}></LinkA>
               </Li>
               <Li>
-                <LinkA></LinkA>
+                <LinkA to={`/crew/Victor Glover`}></LinkA>
               </Li>
               <Li>
-                <LinkA></LinkA>
+                <LinkA to={`/crew/Anousheh Ansari`}></LinkA>
               </Li>
             </Navigation>
           </CrewMember>
-          <CrewPhoto src={douglas} alt="astro photo"></CrewPhoto>
+          <CrewPhoto src={images.png} alt="astro photo"></CrewPhoto>
         </CrewInfo>
       </CrewContainer>
     </>

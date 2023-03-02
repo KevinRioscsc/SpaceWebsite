@@ -80,7 +80,7 @@ const Destination = (props) => {
                 </PlanetLi>
               </NavigationPlanet>
               <PlanetFacts>
-                <PlanetName>{name}</PlanetName>
+                <PlanetName>{name.toUpperCase()}</PlanetName>
                 <PlanetP>{description}</PlanetP>
               </PlanetFacts>
             </PlanetDescr>
@@ -88,11 +88,11 @@ const Destination = (props) => {
             <PlanetTravel>
               <Distance>
                 <DistanceTitle>AVG. DISTANCE</DistanceTitle>
-                <ActualDistance>{distance}</ActualDistance>
+                <ActualDistance>{distance.toUpperCase()}</ActualDistance>
               </Distance>
               <Time>
                 <TimeTitle>EST. TRAVEL TIME</TimeTitle>
-                <ActualTime>{travel}</ActualTime>
+                <ActualTime>{travel.toUpperCase()}</ActualTime>
               </Time>
             </PlanetTravel>
           </PlanetWrapper>
