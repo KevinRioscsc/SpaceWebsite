@@ -10,8 +10,10 @@ import {
   Name,
   LinkTo,
 } from "./Styled";
+import { useNavigate } from "../Context/navigationGuide";
 //reduce LinksLi by iterating thru a data array
 const Naviagtion = () => {
+  const { setGETID } = useNavigate();
   return (
     <>
       <NavigationContain>
@@ -19,7 +21,7 @@ const Naviagtion = () => {
         <LinksContainer>
           <Line></Line>
           <LinksLi>
-            <LinkTo to={"/"} activeClassName>
+            <LinkTo to={"/"} activeClassName onClick={() => setGETID("Home")}>
               <Num>00</Num>
               <Name>HOME</Name>
             </LinkTo>
@@ -29,19 +31,28 @@ const Naviagtion = () => {
               defaultValue={"/destination/Moon"}
               to={"/destination"}
               activeClassName
+              onClick={() => setGETID("Destination")}
             >
               <Num>01</Num>
               <Name>DESTINATION</Name>
             </LinkTo>
           </LinksLi>
           <LinksLi>
-            <LinkTo to={"/crew"} activeClassName>
+            <LinkTo
+              to={"/crew"}
+              activeClassName
+              onClick={() => setGETID("Crew")}
+            >
               <Num>02</Num>
               <Name>CREW</Name>
             </LinkTo>
           </LinksLi>
           <LinksLi>
-            <LinkTo to={"/technology"} activeClassName>
+            <LinkTo
+              to={"/technology"}
+              onClick={() => setGETID("Technology")}
+              activeClassName
+            >
               <Num>03</Num>
               <Name>TECHNOLOGY</Name>
             </LinkTo>

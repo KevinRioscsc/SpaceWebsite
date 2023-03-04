@@ -1,8 +1,5 @@
 import React from "react";
-import DestinationBackground from "../Downloads/assets/destination/background-destination-desktop.jpg";
 import Destination from "../Component/DestinationHero/Destination";
-import Naviagtion from "../Component/Navigation/Naviagtion";
-import BackTemplate from "../Component/Background Template/BackTemplate";
 import { useParams } from "react-router-dom";
 import { destination } from "../Downloads/data";
 
@@ -15,10 +12,7 @@ const DestinationPage = () => {
 
   return (
     <>
-      <BackTemplate img={DestinationBackground}>
-        <Naviagtion />
-        <Destination {...item} />
-      </BackTemplate>
+      <Destination {...item} />
     </>
   );
 };

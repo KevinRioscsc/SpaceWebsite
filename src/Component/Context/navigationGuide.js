@@ -7,7 +7,7 @@ export const useNavigate = () => {
 };
 
 const NavigationGuide = ({ children }) => {
-  const [getID, setGETID] = useState("Moon");
+  const [getID, setGETID] = useState("Home");
 
   const value = {
     getID,
