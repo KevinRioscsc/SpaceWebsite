@@ -29,6 +29,9 @@ export const LinksContainer = styled.ul`
     padding: 0px 20px 0px 20px;
     backdrop-filter: blur(81.55px);
   }
+  @media screen and (max-width: 588px) {
+    display: none;
+  }
 `;
 export const Line = styled.div`
   height: 1px;
@@ -99,5 +102,15 @@ export const LinkTo = styled(NavLink)`
     background: rgb(255, 255, 255);
     transition: all 0.2s ease-in-out;
     opacity: 1;
+  }
+`;
+export const Ham = styled.img`
+  display: none;
+
+  @media screen and (max-width: 588px) {
+    display: unset;
+    color: white;
+    padding-right: 50px;
+    cursor: pointer;
   }
 `;

@@ -8,7 +8,9 @@ import {
   DESCRIPTION,
   CALLTOACTION,
 } from "./styled";
+import { useNavigate } from "../Context/navigationGuide";
 const Hero = () => {
+  const { setGETID } = useNavigate();
   return (
     <>
       <HeroContainer>
@@ -22,7 +24,7 @@ const Hero = () => {
             world experience!
           </DESCRIPTION>
         </Headlines>
-        <Link to={"/destination"}>
+        <Link to={"/destination"} onClick={() => setGETID("Destination")}>
           <CALLTOACTION>EXPLORE</CALLTOACTION>
         </Link>
       </HeroContainer>

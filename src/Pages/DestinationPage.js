@@ -12,6 +12,7 @@ const DestinationPage = () => {
 
   return (
     <>
+      {console.log(id)}
       <Destination {...item} />
     </>
   );

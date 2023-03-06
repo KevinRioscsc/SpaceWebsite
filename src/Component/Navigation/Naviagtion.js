@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../Downloads/assets/shared/logo.svg";
+import hamburger from "../../Downloads/assets/shared/icon-hamburger.svg";
 import {
   NavigationContain,
   Logo,
@@ -9,15 +10,20 @@ import {
   Num,
   Name,
   LinkTo,
+  Ham,
 } from "./Styled";
 import { useNavigate } from "../Context/navigationGuide";
+import SideNav from "./Hamburger/SideNav";
 //reduce LinksLi by iterating thru a data array
 const Naviagtion = () => {
+  const [active, setActive] = useState(false);
   const { setGETID } = useNavigate();
   return (
     <>
       <NavigationContain>
         <Logo src={logo} height={50}></Logo>
+        <Ham src={hamburger} height={30} onClick={() => setActive(true)}></Ham>
+        <SideNav active={active} setActive={setActive} />
         <LinksContainer>
           <Line></Line>
           <LinksLi>

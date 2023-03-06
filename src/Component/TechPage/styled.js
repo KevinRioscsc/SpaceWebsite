@@ -8,18 +8,18 @@ export const TechWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 50px;
-  @media screen and (max-width: 1145px) {
+  @media screen and (max-width: 1222px) {
     padding-left: 60px;
-    padding-top: 50px;
   }
   @media screen and (max-width: 768px) {
-    padding: 50px 60px;
+    padding: 0px 60px;
+    padding-bottom: 60px;
   }
 `;
 export const Title = styled.div`
   display: flex;
   gap: 20px;
-
+  padding-top: 50px;
   font-size: 28px;
   @media screen and (max-width: 768px) {
     font-size: 20px;

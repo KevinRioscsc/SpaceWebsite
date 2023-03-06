@@ -2,20 +2,28 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 export const DestinationContainer = styled.div`
-  padding: 100px 150px;
+  padding: 0px 150px;
   color: white;
   display: flex;
   flex-direction: column;
 
   gap: 100px;
+  @media screen and (max-width: 1222px) {
+    padding: 0px 60px;
+  }
   @media screen and (max-width: 768px) {
     padding: 0px 60px;
-    padding-top: 50px;
+    height: auto;
+    padding-bottom: 115px;
+  }
+  @media screen and (max-width: 375px) {
+    padding: 0px 20px;
   }
 `;
 export const Title = styled.div`
   font-size: 28px;
   display: flex;
+  padding-top: 50px;
   gap: 20px;
   @media screen and (max-width: 768px) {
     font-size: 20px;
@@ -42,6 +50,9 @@ export const PlanetPhoto = styled.img`
   }
   @media screen and (max-width: 768px) {
     width: 300px;
+  }
+  @media screen and (max-width: 375px) {
+    width: 170px;
   }
 `;
 export const PlanetDescr = styled.div`
@@ -73,6 +84,9 @@ export const PlanetName = styled.div`
   @media screen and (max-width: 768px) {
     font-size: 80px;
   }
+  @media screen and (max-width: 375px) {
+    font-size: 56px;
+  }
 `;
 export const PlanetP = styled.div`
   color: #d0d6f9;
@@ -82,6 +96,9 @@ export const PlanetP = styled.div`
   @media screen and (max-width: 768px) {
     font-size: 16px;
     text-align: center;
+  }
+  @media screen and (max-width: 375px) {
+    font-size: 15px;
   }
 `;
 export const Line = styled.div`
@@ -94,6 +111,10 @@ export const PlanetTravel = styled.div`
   gap: 50px;
   @media screen and (max-width: 768px) {
     justify-content: center;
+  }
+  @media screen and (max-width: 378px) {
+    flex-direction: column;
+    padding-bottom: 150px;
   }
 `;
 export const Distance = styled.div`

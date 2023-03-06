@@ -8,8 +8,12 @@ export const CrewContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   @media screen and (max-width: 1222px) {
     padding: 0px 60px;
+  }
+  @media screen and (max-width: 768px) {
+    height: auto;
   }
 `;
 export const Title = styled.div`

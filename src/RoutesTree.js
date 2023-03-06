@@ -13,8 +13,6 @@ const RoutesTree = () => {
   const { getID } = useNavigate();
 
   const backgroundObj = backgrounds.find((prev) => prev.name === getID);
-  console.log(backgroundObj);
-
   return (
     <>
       <BackTemplate

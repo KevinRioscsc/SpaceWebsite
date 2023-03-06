@@ -13,6 +13,7 @@ export const HeroContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     gap: 156px;
+    padding-bottom: 115px;
   }
 `;
 export const Headlines = styled.div`
@@ -22,6 +23,9 @@ export const Headlines = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  @media screen and (max-width: 375px) {
+    width: 275px;
+  }
 `;
 export const PreTitle = styled.div`
   align-self: flex-start;
@@ -33,10 +37,16 @@ export const PreTitle = styled.div`
     font-size: 20px;
     align-self: center;
   }
+  @media screen and (max-width: 375px) {
+    font-size: 16px;
+  }
 `;
 export const Title = styled.div`
   font-family: "Bellefair", serif;
   font-size: 150px;
+  @media screen and (max-width: 375px) {
+    font-size: 80px;
+  }
 `;
 export const DESCRIPTION = styled.div`
   font-family: "Barlow ", sans-serif;
@@ -46,6 +56,9 @@ export const DESCRIPTION = styled.div`
   @media screen and (max-width: 768px) {
     text-align: center;
     font-size: 16px;
+  }
+  @media screen and (max-width: 375px) {
+    font-size: 15px;
   }
 `;
 export const CALLTOACTION = styled.div`
@@ -83,6 +96,15 @@ export const CALLTOACTION = styled.div`
     &:hover::before {
       opacity: 1;
       border: 50px solid #272727;
+    }
+  }
+  @media screen and (max-width: 375px) {
+    width: 150px;
+    height: 150px;
+    font-size: 20px;
+    &::before {
+      width: 150px;
+      height: 150px;
     }
   }
 `;

@@ -24,10 +24,8 @@ import {
   PlanetLink,
   PlanetWrapper,
 } from "./Styled";
-import { useNavigate } from "../Context/navigationGuide";
 
 const Destination = (props) => {
-  const { setGETID } = useNavigate();
   const { name, images, description, distance, travel } = props;
 
   return (
