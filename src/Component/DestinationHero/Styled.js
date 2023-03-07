@@ -28,6 +28,9 @@ export const Title = styled.div`
   @media screen and (max-width: 768px) {
     font-size: 20px;
   }
+  @media screen and (max-width: 375px) {
+    justify-content: center;
+  }
 `;
 export const PlanetInfo = styled.div`
   display: flex;
@@ -189,3 +192,4 @@ export const PlanetWrapper = styled.div`
     width: 100%;
   }
 `;
+export const MobileNavigation = styled.ul``;

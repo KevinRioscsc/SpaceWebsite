@@ -15,6 +15,10 @@ export const TechWrapper = styled.div`
     padding: 0px 60px;
     padding-bottom: 60px;
   }
+  @media screen and (max-width: 375px) {
+    padding: 0px 20px;
+    padding-bottom: 60px;
+  }
 `;
 export const Title = styled.div`
   display: flex;
@@ -23,6 +27,9 @@ export const Title = styled.div`
   font-size: 28px;
   @media screen and (max-width: 768px) {
     font-size: 20px;
+  }
+  @media screen and (max-width: 375px) {
+    justify-content: center;
   }
 `;
 export const Num = styled.div`
@@ -49,6 +56,9 @@ export const TechFlex = styled.div`
   @media screen and (max-width: 768px) {
     flex-direction: column;
     gap: 40px;
+  }
+  @media screen and (max-width: 375px) {
+    gap: 26px;
   }
 `;
 export const Navigation = styled.ul`
@@ -86,6 +96,11 @@ export const LinksA = styled(NavLink)`
     width: 60px;
     font-size: 24px;
   }
+  @media screen and (max-width: 375px) {
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+  }
 `;
 export const TechInfo = styled.div`
   display: flex;
@@ -102,6 +117,9 @@ export const TechName = styled.div`
   @media screen and (max-width: 768px) {
     font-size: 40px;
   }
+  @media screen and (max-width: 375px) {
+    font-size: 24px;
+  }
 `;
 export const TechDescr = styled.div`
   font-family: "Barlow ", sans-serif;
@@ -112,6 +130,9 @@ export const TechDescr = styled.div`
   @media screen and (max-width: 768px) {
     text-align: center;
     font-size: 16px;
+  }
+  @media screen and (max-width: 375px) {
+    font-size: 15px;
   }
 `;
 export const TechPhoto = styled.img`
@@ -134,6 +155,10 @@ export const TechTitle = styled.div`
   font-size: 16px;
   letter-spacing: 2.7px;
   color: #d0d6f9;
+  @media screen and (max-width: 375px) {
+    font-size: 14px;
+    letter-spacing: 2.36px;
+  }
 `;
 export const Landscape = styled.img`
   display: none;

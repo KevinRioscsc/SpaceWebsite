@@ -15,6 +15,10 @@ export const CrewContainer = styled.div`
   @media screen and (max-width: 768px) {
     height: auto;
   }
+  @media screen and (max-width: 375px) {
+    padding: 0px 20px;
+    padding-bottom: 550px;
+  }
 `;
 export const Title = styled.div`
   display: flex;
@@ -23,6 +27,9 @@ export const Title = styled.div`
   font-size: 28px;
   @media screen and (max-width: 768px) {
     font-size: 20px;
+  }
+  @media screen and (max-width: 375px) {
+    justify-content: center;
   }
 `;
 export const Num = styled.div`
@@ -63,6 +70,9 @@ export const CrewTitle = styled.div`
   @media screen and (max-width: 768px) {
     font-size: 24px;
   }
+  @media screen and (max-width: 375px) {
+    font-size: 16px;
+  }
 `;
 export const CrewName = styled.div`
   font-size: 56px;
@@ -70,6 +80,9 @@ export const CrewName = styled.div`
   @media screen and (max-width: 768px) {
     font-size: 40px;
     padding-top: 8px;
+  }
+  @media screen and (max-width: 375px) {
+    font-size: 24px;
   }
 `;
 export const CrewDesc = styled.div`
@@ -84,6 +97,9 @@ export const CrewDesc = styled.div`
     font-size: 16px;
     padding-top: 16px;
   }
+  @media screen and (max-width: 375px) {
+    font-size: 15px;
+  }
 `;
 export const Navigation = styled.ul`
   display: flex;
@@ -92,6 +108,9 @@ export const Navigation = styled.ul`
   padding-top: 100px;
   @media screen and (max-width: 768px) {
     padding-top: 20px;
+  }
+  @media screen and (max-width: 375px) {
+    display: none;
   }
 `;
 export const Li = styled.li`
@@ -126,5 +145,35 @@ export const CrewPhoto = styled.img`
   @media screen and (max-width: 768px) {
     align-self: center;
     width: 456.37px;
+  }
+  @media screen and (max-width: 375px) {
+    display: none;
+  }
+`;
+export const MobileNavigation = styled.ul`
+  display: none;
+
+  @media screen and (max-width: 375px) {
+    display: flex;
+    padding: 0;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 32px;
+  }
+`;
+export const MobileCrewPhoto = styled.img`
+  display: none;
+  @media screen and (max-width: 375px) {
+    display: unset;
+    width: 177.12px;
+  }
+`;
+export const MobileLine = styled.div`
+  display: none;
+  @media screen and (max-width: 375px) {
+    display: unset;
+    width: 100%;
+    height: 2px;
+    background: #383b4b;
   }
 `;
