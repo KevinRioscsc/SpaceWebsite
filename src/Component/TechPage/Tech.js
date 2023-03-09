@@ -16,7 +16,7 @@ import {
   Landscape,
   Box,
 } from "./styled";
-
+//
 const Tech = (props) => {
   const { description, images, name } = props;
   return (

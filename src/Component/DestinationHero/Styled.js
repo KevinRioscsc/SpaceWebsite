@@ -192,4 +192,3 @@ export const PlanetWrapper = styled.div`
     width: 100%;
   }
 `;
-export const MobileNavigation = styled.ul``;
