@@ -22,15 +22,15 @@ const RoutesTree = () => {
       >
         <Naviagtion />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route exact path="/" element={<Home />} />
           <Route exact path="/destination" element={<DestinationPage />}>
-            <Route path=":id" element={<DestinationPage />} />
+            <Route exact path=":id" element={<DestinationPage />} />
           </Route>
           <Route exact path="/crew" element={<Crew />}>
-            <Route path=":id" element={<Crew />} />
+            <Route exact path=":id" element={<Crew />} />
           </Route>
           <Route exact path="/technology" element={<TechPage />}>
-            <Route path=":id" element={<TechPage />} />
+            <Route exact path=":id" element={<TechPage />} />
           </Route>
         </Routes>
       </BackTemplate>
